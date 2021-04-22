@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.medhelp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.medhelp.ui.profile.ProfileFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_purchase"
+        android:name="com.medhelp.ui.purchasehistory.PurchaseFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_purchase" />
+    <fragment
+        android:id="@+id/nav_cardDetails"
+        android:name="com.medhelp.ui.paymentInfo.PaymentInfoFragment"
+        android:label="@string/payment_page"
+        tools:layout="@layout/fragment_payment_info" />
+    <fragment
+        android:id="@+id/nav_medical_news"
+        android:name="com.medhelp.ui.medicalNews.view.MedicalNews"
+        android:label="@string/medicalnews"
+        tools:layout="@layout/fragment_medical_news" />
+
+</navigation>

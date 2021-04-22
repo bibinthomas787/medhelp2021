@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:id="@+id/tvCreditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/credit_debit_card_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCard"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditText"
+        >
+    <EditText
+        android:id="@+id/etCardNumber"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="01234 56789"
+        android:hint="XXXX-XXXX-XXXX-XXXX"
+        android:inputType="number"
+        android:maxLength="19"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvExpiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Expiry"
+
+        app:layout_constraintBottom_toTopOf="@id/tilExpiry"
+        app:layout_constraintEnd_toStartOf="@+id/tvCVV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilCard" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilExpiry"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/tilCVV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpiry"
+        >
+    <com.medhelp.ui.paymentInfo.utils.expiry.ExpirationDateEditText
+        android:hint="mm/yy"
+        android:id="@+id/etExpiry"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="01234567890/"
+        android:inputType="date"
+        android:maxLength="@integer/expiration_date_length_including_slash"
+    />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/tvCVV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="CVV"
+        app:layout_constraintBottom_toTopOf="@id/tilExpiry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvExpiry"
+        app:layout_constraintTop_toBottomOf="@+id/tilCard" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCVV"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:hint="CVV"
+        app:layout_constraintBottom_toBottomOf="@+id/tilExpiry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tilExpiry"
+        app:layout_constraintTop_toBottomOf="@+id/tvCVV">
+
+        <EditText
+            android:id="@+id/etCVV"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+
+            android:inputType="number"
+            android:maxLength="@integer/maximum_cvv_length" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btSave"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/purple_200"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilCVV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

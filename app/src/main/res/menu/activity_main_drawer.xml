@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_outline_home_24"
+            android:title="@string/menu_option" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_person_outline_24"
+            android:title="@string/profile_option" />
+        <item
+            android:id="@+id/nav_purchase"
+            android:icon="@drawable/ic_outline_shopping_cart_24"
+            android:title="@string/purchse_option" />
+        <item
+            android:id="@+id/nav_cardDetails"
+            android:icon="@drawable/ic_baseline_payment_24"
+            android:title="@string/payment_page" />
+        <item
+            android:id="@+id/nav_medical_news"
+            android:icon="@drawable/ic_outline_feed_24"
+            android:title="@string/medicalnews" />
+
+    </group>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#xA;            android:id=&quot;@+id/nav_home&quot;&#xA;            android:title=&quot;@string/menu_option&quot; />&#xA;        &lt;item&#xA;            android:id=&quot;@+id/nav_gallery&quot;" />
+</menu>

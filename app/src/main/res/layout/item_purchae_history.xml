@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tvCreditCardType"
+            android:layout_toLeftOf="@+id/tvPay"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="Mb-creditcard/ioc pay"/>
+        <TextView
+            android:id="@+id/tvCreditCard"
+            android:layout_below="@+id/tvCreditCardType"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/tvPay"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="from xxxx-xxxx-xxxx-xxxx"/>
+        <TextView
+android:id="@+id/tvDate"
+            android:layout_below="@+id/tvCreditCard"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/tvPay"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="SUN, JAN 10,2021"/>
+        <TextView
+            android:id="@+id/tvPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
